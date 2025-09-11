@@ -3,6 +3,8 @@ html, body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    color: white;
+    font-family: "Comic Sans MS";
 }
 
 header {
@@ -11,7 +13,6 @@ header {
     padding: 10px;
     gap: 20px;
     align-items: center;
-    overflow: hidden;
 
     background-color: slategrey;
     border-bottom: 2px solid dimgray;
@@ -19,7 +20,6 @@ header {
     letter-spacing: 0.1cm;
     font-size: 20px;
     font-variant: small-caps;
-    font-family: "Comic Sans MS";
 }
 
 header img {
@@ -28,7 +28,7 @@ header img {
 }
 
 nav {
-    font-family: "Comic Sans MS";
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
 
     ul {
         display: flex;
@@ -48,15 +48,15 @@ nav {
 
             a {
                 display: block;
-                color: black;
+                color: white;
                 text-align: center;
                 padding: 10px;
                 font-variant: small-caps;
                 background-color: slategray;
                 border: 1px solid dimgray;
+                text-decoration: none;
 
                 &:hover {
-                    color: white;
                     background-color: lightslategray;
                 }
             }
@@ -66,39 +66,57 @@ nav {
 
 main {
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: "Comic Sans MS";
     width: 100%;
-    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
     gap: 10px;
-    overflow: scroll;
+    overflow: visible;
+    height: auto;
 
     ul {
+        color: black;
     }
 
     h2 {
         background-color: slategrey;
         padding: 10px;
-        border-radius: 10px;
         font-size: 25px;
         font-variant: small-caps;
     }
 }
 
 .part1 {
+    display: flex;
+    flex-direction: column;
     width: 50%;
+    height: 100%;
     padding: 20px;
-    border-left: 5px double dimgray;
-    border-right: 5px double dimgray;
-    border-radius: 30px;
+    border-left: 5px solid dimgray;
+    border-right: 5px solid dimgray;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
 
     div {
         display: flex;
         justify-items: center;
         align-items: center;
         padding: 30px;
+        color: black;
+    }
+
+    h3 {
+        color: black;
+    }
+
+    ul {
+        margin: 0;
+    }
+
+    iframe {
+        width: 100%;
     }
 }
 
@@ -106,13 +124,14 @@ main {
     display: flex;
     flex-direction: column;
     width: 50%;
+    height: 100%;
     padding: 20px;
-    border-left: 5px dashed dimgray;
-    border-right: 5px dashed dimgray;
-    border-radius: 30px;
+    border-left: 5px solid dimgray;
+    border-right: 5px solid dimgray;
     justify-items: center;
     align-items: center;
     perspective: 800px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
 
     img {
         animation: spin 8s linear infinite;
@@ -127,21 +146,27 @@ main {
 
 .gallery {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    border-left: 5px solid dimgray;
+    border-right: 5px solid dimgray;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    width: 50%;
 
-    ul {
-        width: 80%;
-        height: 100%;
+    div {
         display: flex;
-        list-style: none;
         flex-direction: row;
+        flex-wrap: wrap;
         gap: 10px;
-        overflow: scroll;
-        margin: 0;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
 
-        li a img {
+        img {
+            display: block;
+            border-radius: 8px;
+            width: 300px;
             height: 300px;
         }
     }
@@ -154,5 +179,5 @@ footer {
     text-align: center;
     bottom: 0;
     height: 45px;
-    font-family: "Comic Sans MS";
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
 }
