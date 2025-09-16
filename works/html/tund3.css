@@ -1,0 +1,305 @@
+table {
+    border: 1pt solid black;
+    width: 300px;
+    height: 300px;
+    border-collapse: collapse;
+}
+
+table td {
+    border: 1pt solid black;
+    text-align: center;
+    height: 50px;
+}
+
+/*-----------------lihtne-----------------*/
+table#lihtne tr:nth-child(1) td:nth-child(1) {
+    background-color: cornflowerblue;
+}
+
+table#lihtne tr:nth-child(1) td:nth-child(2) {
+    background-color: indianred;
+}
+
+table#lihtne tr:nth-child(2) td:nth-child(1) {
+    background-color: peru;
+}
+
+table#lihtne tr:nth-child(2) td:nth-child(2) {
+    background-color: darkcyan;
+}
+
+/*-----------------Keeruline1-----------------*/
+table#keeruline1 tr:nth-child(1) td:nth-child(1) {
+    background-color: violet;
+}
+
+table#keeruline1 tr:nth-child(1) td:nth-child(2) {
+    background-color: olive;
+}
+
+table#keeruline1 tr:nth-child(2) td:nth-child(1) {
+    background-color: palevioletred;
+}
+
+/*-----------------Keeruline2-----------------*/
+table#keeruline2 tr:nth-child(1) td:nth-child(1) {
+    background-color: lightslategray;
+}
+
+table#keeruline2 tr:nth-child(2) td:nth-child(1) {
+    background-color: forestgreen;
+}
+
+table#keeruline2 tr:nth-child(2) td:nth-child(2) {
+    background-color: mediumblue;
+}
+
+table#keeruline2 tr:nth-child(2) td:nth-child(3) {
+    background-color: maroon;
+}
+
+/*-----------------Keeruline3-----------------*/
+table#keeruline3 tr:nth-child(1) td:nth-child(1) {
+    background-color: firebrick;
+}
+
+table#keeruline3 tr:nth-child(1) td:nth-child(2) {
+    background-color: magenta;
+}
+
+table#keeruline3 tr:nth-child(1) td:nth-child(3) {
+    background-color: blue;
+}
+
+table#keeruline3 tr:nth-child(2) td:nth-child(1) {
+    background-color: violet;
+}
+
+table#keeruline3 tr:nth-child(2) td:nth-child(2) {
+    background-color: aqua;
+}
+
+table#keeruline3 tr:nth-child(3) td:nth-child(1) {
+    background-color: honeydew;
+}
+
+table#keeruline3 tr:nth-child(3) td:nth-child(2) {
+    background-color: indianred;
+}
+
+table#keeruline3 tr:nth-child(4) td:nth-child(1) {
+    background-color: blueviolet;
+}
+
+table#keeruline3 tr:nth-child(4) td:nth-child(2) {
+    background-color: chartreuse;
+}
+
+table#keeruline3 tr:nth-child(5) td:nth-child(1) {
+    background-color: cadetblue;
+}
+
+table#keeruline3 tr:nth-child(5) td:nth-child(2) {
+    background-color: chocolate;
+}
+
+/*-----------------Keeruline4-----------------*/
+table#keeruline4 tr:nth-child(1) td:nth-child(1) {
+    background-color: firebrick;
+}
+
+table#keeruline4 tr:nth-child(2) td:nth-child(1) {
+    background-color: violet;
+}
+
+table#keeruline4 tr:nth-child(2) td:nth-child(2) {
+    background-color: aqua;
+}
+
+table#keeruline4 tr:nth-child(2) td:nth-child(3) {
+    background-color: lavender;
+}
+
+table#keeruline4 tr:nth-child(3) td:nth-child(1) {
+    background-color: hotpink;
+}
+
+table#keeruline4 tr:nth-child(3) td:nth-child(2) {
+    background-color: indianred;
+}
+
+table#keeruline4 tr:nth-child(3) td:nth-child(3) {
+    background-color: saddlebrown;
+}
+
+table#keeruline4 tr:nth-child(4) td:nth-child(1) {
+    background-color: blueviolet;
+}
+
+table#keeruline4 tr:nth-child(4) td:nth-child(2) {
+    background-color: chartreuse;
+}
+
+table#keeruline4 tr:nth-child(5) td:nth-child(1) {
+    background-color: orange;
+}
+
+table#keeruline4 tr:nth-child(6) td:nth-child(1) {
+    background-color: chocolate;
+}
+
+/*-----------------tabel1-----------------*/
+table#tabel1 tr:nth-child(1) td:nth-child(1) {
+    background-color: chocolate;
+}
+
+table#tabel1 tr:nth-child(1) td:nth-child(2) {
+    background-color: gray;
+}
+
+table#tabel1 tr:nth-child(1) td:nth-child(3) {
+    background-color: olive;
+}
+
+table#tabel1 tr:nth-child(1) td:nth-child(4) {
+    background-color: darkgreen;
+}
+
+table#tabel1 tr:nth-child(2) td:nth-child(1) {
+    background-color: fuchsia;
+}
+
+table#tabel1 tr:nth-child(2) td:nth-child(2) {
+    background-color: darkcyan;
+}
+
+table#tabel1 tr:nth-child(3) td:nth-child(1) {
+    background-color: violet;
+}
+
+table#tabel1 tr:nth-child(4) td:nth-child(1) {
+    background-color: yellow;
+}
+
+table#tabel1 tr:nth-child(4) td:nth-child(2) {
+    background-color: orange;
+}
+
+table#tabel1 tr:nth-child(5) td:nth-child(1) {
+    background-color: lavender;
+}
+
+table#tabel1 tr:nth-child(5) td:nth-child(2) {
+    background-color: chartreuse;
+}
+
+table#tabel1 tr:nth-child(5) td:nth-child(3) {
+    background-color: khaki;
+}
+
+table#tabel1 tr:nth-child(6) td:nth-child(1) {
+    background-color: orangered;
+}
+
+table#tabel1 tr:nth-child(6) td:nth-child(2) {
+    background-color: yellowgreen;
+}
+
+table#tabel1 tr:nth-child(6) td:nth-child(3) {
+    background-color: mediumblue;
+}
+
+/*-----------------tabel2-----------------*/
+table#tabel2 {
+    border: none;
+}
+
+table#tabel2 tr {
+    border: none;
+}
+
+table#tabel2 tr:nth-child(1) td:nth-child(1) {
+    background-color: chocolate;
+}
+
+table#tabel2 tr:nth-child(1) td:nth-child(2) {
+    border: none;
+    color: white;
+}
+
+table#tabel2 tr:nth-child(1) td:nth-child(3) {
+    background-color: chocolate;
+}
+
+table#tabel2 tr:nth-child(2) td:nth-child(1) {
+    border: none;
+    color: white;
+}
+
+table#tabel2 tr:nth-child(2) td:nth-child(2) {
+    background-color: chocolate;
+}
+
+table#tabel2 tr:nth-child(2) td:nth-child(3) {
+    border: none;
+    color: white;
+}
+
+table#tabel2 tr:nth-child(2) td:nth-child(4) {
+    background-color: chocolate;
+}
+
+table#tabel2 tr:nth-child(2) td:nth-child(5) {
+    border: none;
+    color: white;
+}
+
+table#tabel2 tr:nth-child(3) td:nth-child(1) {
+    border: none;
+    color: white;
+}
+
+table#tabel2 tr:nth-child(3) td:nth-child(2) {
+    background-color: chocolate;
+}
+
+table#tabel2 tr:nth-child(3) td:nth-child(3) {
+    border: none;
+    color: white;
+}
+
+table#tabel2 tr:nth-child(4) td:nth-child(1) {
+    border: none;
+    color: white;
+}
+
+table#tabel2 tr:nth-child(4) td:nth-child(2) {
+    background-color: chocolate;
+}
+
+table#tabel2 tr:nth-child(4) td:nth-child(3) {
+    border: none;
+    color: white;
+}
+
+table#tabel2 tr:nth-child(4) td:nth-child(4) {
+    background-color: chocolate;
+}
+
+table#tabel2 tr:nth-child(4) td:nth-child(5) {
+    border: none;
+    color: white;
+}
+
+table#tabel2 tr:nth-child(5) td:nth-child(1) {
+    background-color: chocolate;
+}
+
+table#tabel2 tr:nth-child(5) td:nth-child(2) {
+    border: none;
+    color: white;
+}
+
+table#tabel2 tr:nth-child(5) td:nth-child(3) {
+    background-color: chocolate;
+}
