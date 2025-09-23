@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Vormid HTML keeles</title>
+    <link rel="stylesheet" href="tund4.css">
+</head>
+<body>
+    <h1>Matemaatika teadmiste küsimustik</h1>
+    <form name="kysimustik">
+        <fieldset>
+            <legend>Küsimustik:</legend>
+            <table style="border: 1px solid black;">
+                <!--tekstkast-->
+                <tr>
+                    <td>
+                        <label for="nimi">
+                            <strong>Sisesta oma nimi:</strong>
+                        </label>
+                    </td>
+                    <td><input type="text" id="nimi" name="nimi" placeholder="Eesnimi"></td>
+                </tr>
+
+                <!--e-post-->
+                <tr>
+                    <td><strong>Sisesta oma e-post</strong></td>
+
+                    <td>
+                        <label for="email">Sinu e-post</label>
+                        <input type="email" id="email">
+                    </td>
+                </tr>
+
+                <!--ripploend-->
+                <tr>
+                    <td>
+                        <label for="ryhm">
+                            <strong>Vali rühm:</strong>
+                        </label>
+                    </td>
+                    <td>
+                        <select name="ryhm" id="ryhm">
+                            <option value="">vali...</option>
+                            <option value="TARpv24">TARpv24</option>
+                            <option value="LOGITpv24">LOGITpv24</option>
+                            <option value="TITpv24">TITpv24</option>
+                            <option value="TARpv23">TARpv23</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!--radionupp - Üks valik mitmest-->
+                <tr>
+                    <td><strong>Küsimus 1: 2 + 2 * 2 = ?</strong></td>
+                    <td>
+                        <div>
+                            <input type="radio" name="kysimus1" id="vastus1" value="9">
+                            <label for="vastus1">9</label>
+                            <br>
+
+                            <input type="radio" name="kysimus1" id="vastus2" value="6">
+                            <label for="vastus2">6</label>
+                            <br>
+
+                            <input type="radio" name="kysimus1" id="vastus3" value="8">
+                            <label for="vastus3">8</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- valikud-checkbox - mitu valikud mitmest-->
+                <tr>
+                    <td><strong>Küsimus 2: Millest koosneb kera (шар)?</strong></td>
+
+                    <td>
+                        <div>
+                            <input type="checkbox" name="kysimus2" id="kera_vastus1">
+                            <label for="kera_vastus1">Keskpunktist</label>
+                            <br>
+
+                            <input type="checkbox" name="kysimus2" id="kera_vastus2">
+                            <label for="kera_vastus2">Pinnast</label>
+                            <br>
+
+                            <input type="checkbox" name="kysimus2" id="kera_vastus3">
+                            <label for="kera_vastus3">Kolmnurgast</label>
+                            <br>
+
+                            <input type="checkbox" name="kysimus2" id="kera_vastus4">
+                            <label for="kera_vastus4">Läbimöödust</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- e-post -->
+                <tr>
+                    <td><strong>Küsimus 3: Millal on Piipäev?</strong></td>
+
+                    <td>
+                        <label for="pi">Vali 0 ja 15 vahel</label>
+                        <input type="range" id="pi" min="0" max="15">
+                    </td>
+                </tr>
+
+                <!-- liugur -->
+                <tr>
+                    <td><strong>Küsimus 4: 77 + 33 = ?</strong></td>
+
+                    <td>
+                        <label for="number">Sisesta vastus</label>
+                        <input type="number" id="number">
+                    </td>
+                </tr>
+
+                <!-- tekstiala -->
+                <tr>
+                    <td><strong>Küsimus 5: 2x + 5 = 13</strong></td>
+
+                    <td>
+                        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 5px">
+                            <label for="text">Kirjuta samm-sammuline lahendus võrrandile</label>
+                            <textarea id="text" rows="5" cols="40"></textarea>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- kuupäev valik -->
+                <tr>
+                    <td><strong>Küsimus 6: Mis on Norbert Wieneri sünnipäev?</strong></td>
+
+                    <td>
+                        <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                            <label for="date">Sisesta kuupäev</label>
+                            <input type="date" id="date">
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- värv valik -->
+                <tr>
+                    <td><strong>Küsimus 7: Mis värvi seostatakse matemaatikaga?</strong></td>
+
+                    <td>
+                        <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                            <label for="color">Vali värv</label>
+                            <input type="color" id="color">
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- fail valik -->
+                <tr>
+                    <td><strong>Küsimus 8: Valige trapetsikujuline pilt.</strong></td>
+
+                    <td>
+                        <input type="file" id="file">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <div>
+            <!-- lähtesta nupp -->
+            <input type="reset" id="loobu" value="Loobu">
+            <!-- nupp -->
+            <input type="button" id="salvesta" value="Salvesta">
+        </div>
+    </form>
+</body>
+</html>
