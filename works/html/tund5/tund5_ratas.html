@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Pildimap</title>
+    <link rel="stylesheet" href="tund5.css">
+</head>
+<body>
+    <h1>Pildikaarti loomine map/area abil</h1>
+    <img src="/images/test.png" alt="Ilus auto" usemap="#autokaart">
+    <map name="autokaart">
+        <!--ring-circle coords(x, y, R)-->
+        <area shape="circle" coords="70,240,28" href="tund5_ratas.html" alt="ratas">
+        <!--poly -polügon-kolmnurk-punktid loeme vasakult paremale-->
+        <area shape="poly" coords="84,216,148,130,213,217" href="tund5_aken.html" alt="">
+        <!--rect--ristkülik-->
+        <area shape="rect" coords="63,101,234,166" href="tund5_kere.html" alt="kere">
+    </map>
+    <div id="info">
+        Autoratas on jätnud rohukamarasse inetu haava. || taime välispinna ja selle aluste kudede mehaaniline vigastus. Vaigu saamiseks lõigati mändidesse haavad.
+        <img src="https://ee2.pigugroup.eu/colours/483/052/483052/ac5b702bf2b0196bca0ec8108eb8e807_reference.jpg" alt="Ilus ratas">
+    </div>
+</body>
+</html>

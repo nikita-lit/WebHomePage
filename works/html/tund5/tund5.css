@@ -1,0 +1,16 @@
+div#info {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 100px;
+    left: 350px;
+    width: 40%;
+    padding: 2%;
+    background-color: olive;
+    border-radius: 5px;
+    gap: 10px;
+}
+
+div#info img {
+    width: 300px;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Pildimap</title>
+    <link rel="stylesheet" href="tund5.css">
+</head>
+<body>
+    <h1>Pildikaarti loomine map/area abil</h1>
+    <img src="/images/test.png" alt="Ilus auto" usemap="#autokaart">
+    <map name="autokaart">
+        <!--ring-circle coords(x, y, R)-->
+        <area shape="circle" coords="70,240,28" href="tund5_ratas.html" alt="ratas">
+        <!--poly -polügon-kolmnurk-punktid loeme vasakult paremale-->
+        <area shape="poly" coords="84,216,148,130,213,217" href="tund5_aken.html" alt="">
+        <!--rect--ristkülik-->
+        <area shape="rect" coords="63,101,234,166" href="tund5_kere.html" alt="kere">
+    </map>
+    <div id="info">
+        Sõidukiklaas on klaas, mida kasutatakse mootorsõidukite valgustamiseks. See hõlmab esiklaase, külg- ja tagaaknaid ning klaaspaneelidega katuseid, näiteks katuseluuke.
+        <img src="https://png.pngtree.com/png-vector/20231120/ourmid/pngtree-new-car-windshield-view-white-png-image_10520846.png" alt="Ilus aken">
+    </div>
+</body>
+</html>
