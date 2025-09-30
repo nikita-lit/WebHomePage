@@ -2,19 +2,127 @@
 <html lang="et">
 <head>
   <meta charset="UTF-8">
-  <title>Vormid HTML keeles</title>
+  <title>Õpilase registreerimisvorm</title>
   <link rel="stylesheet" href="tund4_task.css">
 </head>
 <body>
-  <form action="#" method="post">
-    <fieldset>
-      <legend>Isikuandmed</legend>
-      <label for="eesnimi">Eesnimi</label>
-      <input id="eesnimi" name="eesnimi" type="text"><br>
-      <br>
-      <label for="perenimi">Perenimi</label>
-      <input id="perenimi" name="perenimi" type="text"><br>
-    </fieldset>
-  </form>
+	<h1>ÕPILASE REGISTREERIMISVORM</h1>
+
+	<form method="post">
+		<fieldset>
+			<legend>Isikuandmed</legend>
+
+            <label for="eesnimi">Eesnimi</label><br>
+            <input type="text" id="eesnimi" name="eesnimi" maxlength="30" placeholder="nt Mario" required>
+			
+			<br><br>
+
+            <label for="perenimi">Perenimi</label><br>
+            <input type="text" id="perenimi" name="perenimi" maxlength="30" placeholder="nt Metshein" required>
+			
+			<br><br>
+
+            <label for="synnikuup">Sünnikuupäev</label><br>
+            <input type="date" id="synnikuup" name="synnikuup" min="1900-01-01" max="2025-12-31" required>
+			
+			<br><br>
+
+            <label>Sugu</label>
+
+            <br>
+			
+            <input type="radio" id="naine" name="sugu" value="Naine" required>
+            <label for="naine">Naine</label>
+			
+            <input type="radio" id="mees" name="sugu" value="Mees">
+            <label for="mees">Mees</label>
+
+            <input type="radio" id="muu" name="sugu" value="Muu">
+            <label for="muu">Muu</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Kontakt</legend>
+
+            <label for="email">E-post</label><br>
+            <input type="email" id="email" name="email" maxlength="100" placeholder="nt nimi@kool.ee" required>
+			
+			<br><br>
+
+            <label for="telefon">Mobiltelefon</label><br>
+            <input type="tel" id="telefon" name="telefon" placeholder="+37251234567" pattern="^\+372\d{7,8}$" required>
+			
+			<br><br>
+
+            <label for="aadress">Aadress</label><br>
+            <textarea id="aadress" name="aadress" rows="3" placeholder="Tänav, maja, korter"></textarea>
+			
+			<br><br>
+
+            <label for="linn">Linn / asula</label><br>
+            <input type="text" id="linn" name="linn" maxlength="30" placeholder="nt Tallinn">
+			
+			<br><br>
+
+            <label for="posti">Postiindeks</label><br>
+            <input type="text" id="posti" name="posti" pattern="^\d{5}$" placeholder="nt 10111">
+			
+			<br><br>
+
+            <label for="riik">Riik</label><br>
+            <input type="text" id="riik" name="riik" value="Eesti" readonly>
+        </fieldset>
+
+        <fieldset>
+            <legend>Muu info</legend>
+
+            <p>Huvialad</p>
+            <input type="checkbox" id="joonistamine" name="hobi" value="Joonistamine">
+            <label for="joonistamine">Joonistamine</label>
+			
+            <input type="checkbox" id="laulmine" name="hobi" value="Laulmine">
+            <label for="laulmine">Laulmine</label>
+			
+            <input type="checkbox" id="tantsimine" name="hobi" value="Tantsimine">
+            <label for="tantsimine">Tantsimine</label>
+			
+            <input type="checkbox" id="kokkamine" name="hobi" value="Kokkamine">
+            <label for="kokkamine">Kokkamine</label>
+			
+			<br><br>
+
+            <input type="checkbox" id="muuHobi" name="hobi" value="Muu">
+            <label for="muuHobi">Muu:</label>
+			
+            <input type="text" id="muuText" name="muuText" maxlength="30" placeholder="täpsusta (kuni 30 märki)">
+			
+			<br><br>
+
+            <label for="veebileht">Isiklik veebileht</label><br>
+            <input type="url" id="veebileht" name="veebileht" placeholder="https://minuleht.ee">
+			
+			<br><br>
+
+            <label for="teema">Eelistatud teemavärv (valikuline)</label><br>
+            <input type="color" id="teema" name="teema" value="#0000ff">
+			
+			<br><br>
+
+            <label for="dokument">Dokumendid (PDF või pilt)</label><br>
+            <input type="file" id="dokument" name="dokument" accept=".pdf,.png,.jpg">
+        </fieldset>
+
+        <fieldset>
+            <legend>Nõustumine</legend>
+			
+            <input type="checkbox" id="noustun" name="noustun" required>
+            <label for="noustun">
+                Kinnitan, et esitatud andmed on õiged ja luban nende töötlemist vastavalt kooli tingimustele.
+            </label>
+        </fieldset>
+
+        <input type="submit" value="Saada">
+        <input type="reset" value="Tühista">
+	</form>
 </body>
 </html>

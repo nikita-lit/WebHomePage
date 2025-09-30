@@ -7,23 +7,52 @@ html {
     font-family: Arial, sans-serif;
 }
 
-body {
-    display: flex;
-    margin: 0;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-h1 {
-    font-size: 50px;
-    text-align: center;
-}
-
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin: 20px;
+    max-width: 550px;
+    padding: 20px 30px;
+}
+
+fieldset {
+    border: 2px solid lightgray;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 3px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"],
+input[type="url"], input[type="number"], input[type="file"], input[type="color"],
+textarea, select {
+    margin-top: 3px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 5px;
+    width: 95%;
+}
+
+input[type="color"] {
+    height: 50px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"], input[type="reset"] {
+    border: 1px solid lightgray;
+    background: #ededed;
+    padding: 10px;
+    margin: 5px;
+    font-size: 14px;
+    border-radius: 2px;
+    cursor: pointer;
+    width: 100px;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+  background: #e4e4e4;
 }
