@@ -1,0 +1,74 @@
+html {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: 20px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+h1 {
+    background-color: lightslategray;
+    padding: 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+#websites_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    gap: 20px;
+}
+
+.website-div, .but {
+    width: 300px;
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    background-color: slategrey;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.1s ease-in-out;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.but {
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    height: 20px;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 30px;
+}
+
+.website-div:hover, #back:hover, .but:hover {
+    transform: scale(1.05);
+}
+
+.website-div a {
+    text-decoration: none;
+    color: white;
+    width: 100%;
+}
