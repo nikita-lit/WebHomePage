@@ -4,8 +4,20 @@
     <meta charset="UTF-8">
     <title>Nikita Litvinenko Veebirakenduste Kodu Leht</title>
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous">
+    </script>
+
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+            integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="
+            crossorigin="anonymous">
+    </script>
+
+    <script src="main.js"></script>
 </head>
-<body>
+<body onload="onLoad()">
     <!--päis/шапка-->
     <header>
         <img src="images/cat_image.png" alt="Kass">
@@ -13,7 +25,7 @@
     </header>
 
     <!--navigeerimis menüü-->
-    <nav>
+    <nav style="display: flex; align-items: flex-end; justify-content: flex-end; flex-direction: column;">
         <ul>
             <li><a href="index.html">Kodu</a></li>
             <li><a href="topics_links.html">Teemad/Lingid</a></li>
@@ -22,6 +34,9 @@
             <li><a href="media.html">Meedia</a></li>
             <li><a href="https://nikitalitvinenko24.thkit.ee/wp" target="_blank">WordPress</a></li>
         </ul>
+        <div style="padding-right: 5px; width: 35px; height: 35px;">
+            <input type="button" value="↑↓" onclick="toggleNavMenu()" id="nav_toggle_button">
+        </div>
     </nav>
 
     <!--sisu-->
@@ -33,9 +48,43 @@
                 Veebirakendust ei pea alla laadima, vaid saab kasutada võrgus igal ajal, eeldades, et on olemas internetiühendus ja veebibrauser.
             </div>
         </section>
-        <section class="part2">
-            <h2>Hea pilt</h2>
-            <img src="images/cat_image.png" alt="Kass">
+        <section class="part2" style="gap: 5px">
+            <h2>--> jQuery Juhend <--</h2>
+            <ol style="gap: 5px; display: flex; flex-direction: column">
+                <li style="color: black">
+                    Pilt liigub automaatselt paremale ja seejärel vasakule. (animate)
+                    <br>
+                    <input type="button" id="stop_start_button" onclick="toggleImageMoving()" value="Stop"> - Saate peatada ja alustada
+                </li>
+                <li style="color: black">
+                    <input type="button" value="Peida" onclick="hideImage()">
+                    /
+                    <input type="button" value="Näita" onclick="showImage()">
+                    - nupud peida/näita pildi. (show/hide)
+                </li>
+                <li style="color: black">
+                    Draggable - sektsioon pildiga saab lohistada hiirega.
+                    <br>
+                    <input type="button" onclick="onReset()" value="Tagasi">
+                    - nupp viib sektsiooni algasendisse tagasi. (draggable)
+                </li>
+                <li style="color: black">
+                    Kui hiir liigub pildi kohale, lülitub pildi animatsioon välja.
+                    <br>
+                    Kui hiir liigub veebisaidi päise peale, muutub päis tsüaansiniseks.
+                    (mouseenter/mouseleave)
+                </li>
+                <li style="color: black">
+                    Pildi sektsiooni pealkirja automaatne väljajooksmine ja sissejooksmine (fadeOut/fadeIn)
+                </li>
+                <li style="color: black">
+                    Navigatsioonimenüüd saab peita nupu abil ülemises paremas nurgas.
+                </li>
+            </ol>
+        </section>
+        <section class="part2" id="section_hea_pilt">
+            <h2 id="hea_pilt">Hea pilt</h2>
+            <img src="images/cat_image.png" alt="Kass" class="rotating-img">
         </section>
     </main>
 

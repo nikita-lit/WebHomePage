@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Näidis</title>
+    <!--jQuery CDN (minified) paneme lehe juurde-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous">
+    </script>
+
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+            integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="
+            crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" href="tund5.css">
+    <script>
+        function teade()
+        {
+            alert("Kohe näitan teksti!");
+        }
+
+        function punaseks()
+        {
+            $('h1, #tekst').css('color', 'red');
+        }
+
+        function mustaks()
+        {
+            $('h1, #tekst').css('color', 'black');
+        }
+
+        function stardiLeht()
+        {
+            $('h1').mouseenter(punaseks);
+            $('h1').mouseleave(mustaks);
+            $('#tekst').draggable();
+            $('#pilt').draggable();
+            $('#pilt').bind("drag", koord);
+        }
+
+        function koord(event, ui)
+        {
+            let koht = ui.offset;
+            $('#xyz').html('Pildi x: ' + koht.left.toFixed(0) + ' y: ' + koht.top.toFixed(0))
+        }
+    </script>
+</head>
+<body onload="stardiLeht()">
+    <h1>jQuery - see on JS raamastik ja me kasuteme jQuery CDN raamatukogud</h1>
+    <div id="tekst">
+        https://releases.jquery.com/
+        <br>
+        Otsi internetis väike kirjeldus mis on jQuery.
+        <br><br>
+        jQuery on Javascripti <strong>raamistik</strong>, mis lihtsustab Javascripti koodi kirjutamist ning muudab sinu poolt loodava kodulehe ilusamaks ja dünaamilisemaks.
+        jQuery oma väikese mahuga ja suurte võimalustega on saanud väga paljude lemmikuks. Kolme-nelja aastaga on saavutatud väga palju ning tormilise arengu
+        põhjuseks võib olla ka koodi õppimise lihtsus. Lisaks kõigele jäävad mängust välja brauserite erinevused.
+    </div>
+    <input type="button" value="vasakule" onclick="
+        $('div#tekst, h1').animate({left: '0px'}, 4000)">
+    <input type="button" value="paremale" onclick="
+        $('div#tekst, h1').animate({left: '500px'}, 1000)">
+    <input type="button" value="peida teksti" onclick="
+        $('div#tekst').hide(2000)">
+    <input type="button" value="näita teksti" onclick="
+        $('div#tekst').show(2000, teade)">
+
+    <img src="../../images/man_face.png" alt="" id="pilt">
+
+    <div id="xyz"></div>
+</body>
+</html>
