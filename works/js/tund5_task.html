@@ -51,7 +51,7 @@
                     <br>
 
                     <div id="vastus1"></div>
-                    <span class="viga" id="viga_muusika">*Vali vähemalt üks muusik!</span>
+                    <span class="viga" id="viga_muusika">*Valige vähemalt üks muusik!</span>
                 </td>
             </tr>
 
@@ -60,6 +60,7 @@
                 <td>
                     <textarea id="arvamus" name="arvamus" rows="3" oninput="onMusicOpinion()"></textarea>
                     <div id="vastus2"></div>
+                    <span class="viga" id="viga_arvamus">*Kirjutage midagi!</span>
                 </td>
             </tr>
 
@@ -70,6 +71,7 @@
                     <input type="range" id="range" min="0" max="10" step="1" oninput="onMusicRange()">
                     10
                     <div id="vastus3"></div>
+                    <span class="viga" id="viga_tundi">*Valige tundi!</span>
                 </td>
             </tr>
 
@@ -87,6 +89,7 @@
                     </div>
 
                     <div id="vastus4"></div>
+                    <span class="viga" id="viga_radio">*Valige kahe valiku vahel!</span>
                 </td>
             </tr>
 
@@ -95,6 +98,7 @@
                 <td>
                     <input type="text" id="raadiojaam" name="raadiojaam" oninput="onRadioStation()">
                     <div id="vastus5"></div>
+                    <span class="viga" id="viga_raadiojaam">*Kirjutage midagi!</span>
                 </td>
             </tr>
 
@@ -110,6 +114,7 @@
                         <option value="Rock">Rock</option>
                     </select>
                     <div id="vastus6"></div>
+                    <span class="viga" id="viga_fav">*Valige!</span>
                 </td>
             </tr>
         </table>

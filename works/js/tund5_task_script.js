@@ -9,13 +9,7 @@ function onLoad()
         $("#kokkuvote").hide();
         viga = false;
 
-        let muusik1 = document.getElementById("muusik1");
-        let muusik2 = document.getElementById("muusik2");
-        let muusik3 = document.getElementById("muusik3");
-        let muusik4 = document.getElementById("muusik4");
-        let muusik5 = document.getElementById("muusik5");
-
-        if (!muusik1.checked && !muusik2.checked && !muusik3.checked && !muusik4.checked && !muusik5.checked)
+        if (musicianChoice === "")
         {
             $("#viga_muusika").show();
             viga = true;
@@ -23,6 +17,36 @@ function onLoad()
         else
         {
             $("#viga_muusika").hide();
+        }
+
+        if (opinionText === "")
+        {
+            $("#viga_arvamus").show();
+            viga = true;
+        }
+
+        if (musicDays === "")
+        {
+            $("#viga_tundi").show();
+            viga = true;
+        }
+
+        if (listeningRadio === "")
+        {
+            $("#viga_radio").show();
+            viga = true;
+        }
+
+        if(radioStations === "")
+        {
+            $("#viga_raadiojaam").show();
+            viga = true;
+        }
+
+        if (favMusic === "")
+        {
+            $("#viga_fav").show();
+            viga = true;
         }
 
         send();
@@ -79,6 +103,8 @@ function onMusicOpinion()
         v2.innerText = "Sinu arvamus: " + opinionText;
     else
         v2.innerText = "";
+
+    $("#viga_arvamus").hide();
 }
 
 function onMusicRange()
@@ -91,6 +117,8 @@ function onMusicRange()
         v3.innerText = "Sa kuulad umbes " + musicDays + " tundi päevas.";
     else
         v3.innerText = "";
+
+    $("#viga_tundi").hide();
 }
 
 function onRadioListening()
@@ -106,6 +134,7 @@ function onRadioListening()
         listeningRadio = "Ei";
 
     v4.innerText = "Kas sa kuulad raadiot: " + listeningRadio;
+    $("#viga_radio").hide();
 }
 
 function onRadioStation()
@@ -118,6 +147,8 @@ function onRadioStation()
         v5.innerText = "Sinu nimetatud jaamad: " + radioStations;
     else
         v5.innerText = "";
+
+    $("#viga_raadiojaam").hide();
 }
 
 function onFavouriteMusicStyle()
@@ -130,6 +161,8 @@ function onFavouriteMusicStyle()
         v6.innerText = "Sinu vastus: " + favMusic;
     else
         v6.innerText = "Tee ripploendi lahti ja vali";
+
+    $("#viga_fav").hide();
 }
 
 function clean()
@@ -158,6 +191,13 @@ function clean()
     listeningRadio = "";
     radioStations = "";
     favMusic = "";
+
+    $("#viga_raadiojaam").hide();
+    $("#viga_tundi").hide();
+    $("#viga_arvamus").hide();
+    $("#viga_fav").hide();
+    $("#viga_muusika").hide();
+    $("#viga_radio").hide();
 }
 
 function send()
@@ -172,4 +212,11 @@ function send()
     document.getElementById("kradiok").innerText = "Kuulad raadiot: " + listeningRadio;
     document.getElementById("kraadiojaam").innerText = "Raadiojaamad: " + radioStations;
     document.getElementById("kmuusikat").innerText = "Muusikat on kõige rohkem kuulab: " +  favMusic;
+
+    $("#viga_raadiojaam").hide();
+    $("#viga_tundi").hide();
+    $("#viga_arvamus").hide();
+    $("#viga_fav").hide();
+    $("#viga_muusika").hide();
+    $("#viga_radio").hide();
 }

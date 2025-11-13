@@ -105,14 +105,19 @@ function toggleImageMoving()
 
     resetImage();
     const button = document.getElementById('stop_start_button');
-    button.value = isImageMoving ? 'Start' : 'Stop';
+    if (isImageMoving)
+        button.value = 'Stop';
+    else
+        button.value = 'Start';
 
     if (isImageMoving)
     {
+        alert("Pildi liikumine on peatatud.");
         isImageMoving = false
     }
     else
     {
+        alert("Pildi liikumine algas");
         isImageMoving = true
         moveImageRight();
     }
