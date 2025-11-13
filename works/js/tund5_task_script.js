@@ -19,7 +19,7 @@ function onLoad()
             $("#viga_muusika").hide();
         }
 
-        if (opinionText === "")
+        if (opinionText.length < 10)
         {
             $("#viga_arvamus").show();
             viga = true;
@@ -104,7 +104,8 @@ function onMusicOpinion()
     else
         v2.innerText = "";
 
-    $("#viga_arvamus").hide();
+    if (opinionText.length >= 10)
+        $("#viga_arvamus").hide();
 }
 
 function onMusicRange()
