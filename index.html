@@ -16,6 +16,7 @@
     </script>
 
     <script src="main.js"></script>
+    <script src="date.js"></script>
 </head>
 <body onload="onLoad()">
     <!--päis/шапка-->
@@ -46,6 +47,13 @@
             <div>
                 Veebirakendus on arvutitarkvara või programm, mida hoitakse veebiserveris ning mida saab kasutada interneti kaudu veebibrauserite abil.
                 Veebirakendust ei pea alla laadima, vaid saab kasutada võrgus igal ajal, eeldades, et on olemas internetiühendus ja veebibrauser.
+            </div>
+            <div style="padding: 0">
+                <div style="display: flex; gap: 5px">
+                    <input type="button" value="TÄNA ON" onclick="showDate()">
+                    <input type="button" value="Minu sünnipäevani" onclick="daysToBirthday()">
+                </div>
+                <div id="result"></div>
             </div>
         </section>
         <section class="part2" style="gap: 5px">
