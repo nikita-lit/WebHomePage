@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Jõulukaart canvas peal</title>
+    <script src="joulukaart.js"></script>
+    <link rel="stylesheet" href="joulukaart.css">
+</head>
+<body onload="Init()">
+    <h1>Jõulukaart canvas peal!</h1>
+    <canvas id="canva" width="500" height="500"></canvas>
+    <div>
+        <input type="button" value="Maa" onclick="drawGround=!drawGround">
+        <input type="button" value="Kuusk" onclick="drawTree=!drawTree">
+        <input type="button" value="Tähed" onclick="drawStars=!drawStars">
+        <input type="button" value="Kaunistused" onclick="drawTreeDecor=!drawTreeDecor">
+        <input type="button" value="Täht kuuskul" onclick="drawStarOnTree=!drawStarOnTree">
+        <input type="button" value="Jõuluvana" onclick="drawSanta=!drawSanta">
+        <input type="button" value="Lumi" onclick="drawSnow=!drawSnow">
+    </div>
+    <div>
+        <input type="button" value="Puhasta" onclick="ClearAll()">
+        <input type="button" value="Näita kõike" onclick="ShowAll()">
+    </div>
+</body>
+</html>
