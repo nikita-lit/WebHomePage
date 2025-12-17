@@ -19,7 +19,7 @@ function Init()
 
     InitSanta();
     InitTreeDecor();
-    InitText();
+    RandomText();
     InitSnow();
     Draw(); 
 }
@@ -46,7 +46,7 @@ function InitTreeDecor()
     treeDecorations[5] = {x: 290, y: 330, r: 15, color: colors[Math.floor(Math.random() * colors.length)]};
 }
 
-function InitText() 
+function RandomText()
 {
     const texts = [
         "Häid jõule!",
@@ -113,7 +113,7 @@ function DrawSnow()
 
     let m = canvas.getContext("2d");
 
-    m.fillStyle = "white";
+    m.fillStyle = "rgba(255, 255, 255, 0.8)";
     for(let flake of snowFlakes)
     {
         m.beginPath();
@@ -287,6 +287,9 @@ function ClearAll()
 function ShowAll()
 {
     Clear();
+
+    InitTreeDecor();
+    RandomText();
 
     drawGround = true;
     drawTree = true;
