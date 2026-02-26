@@ -1,16 +1,16 @@
 let isDragging = false;
-let isNavHidden = false;
+let isNavHidden = true;
 let isImageBusy = false;
 let isImageMoving = true;
 
 function onLoad()
 {
-    $('#section_hea_pilt').draggable();
-    $('#section_hea_pilt').bind("drag", onDrag);
-    moveImageRight();
+    //$('#section_hea_pilt').draggable();
+    //$('#section_hea_pilt').bind("drag", onDrag);
+    //moveImageRight();
 
-    $('.rotating-img').mouseenter(onMouseEnterImage);
-    $('.rotating-img').mouseleave(onMouseLeaveImage);
+    //$('.rotating-img').mouseenter(onMouseEnterImage);
+    //$('.rotating-img').mouseleave(onMouseLeaveImage);
     $('h1').mouseenter(onMouseEnterHeader);
     $('h1').mouseleave(onMouseLeaveHeader);
 
@@ -52,12 +52,14 @@ function toggleNavMenu()
     if (isNavHidden)
     {
         isNavHidden = false;
-        $('nav').animate({top: '0'}, 400);
+        //$('nav').animate({top: '0'}, 400);
+        $('nav ul').css('display', 'flex');
     }
     else
     {
         isNavHidden = true;
-        $('nav').animate({top: '-60px'}, 400);
+        //$('nav').animate({top: '-60px'}, 400);
+        $('nav ul').css('display', 'none');
     }
 }
 
@@ -84,7 +86,7 @@ function showImage()
     onReset();
     isImageBusy = true;
     resetImage();
-    $('.rotating-img').show(400, () => { isImageBusy = false; moveImageRight() });
+    //$('.rotating-img').show(400, () => { isImageBusy = false; moveImageRight() });
 }
 
 function hideImage()

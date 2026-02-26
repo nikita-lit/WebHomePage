@@ -8,6 +8,7 @@ function showDate()
 
     let time = now.getHours() + ":" + mins;
     let result = document.getElementById("result");
+    result.style.display = "block";
     result.innerHTML = "Kuupäev: " + date + "<br>Kellaaeg: " + time + "<br>Kuupäev ja kellaaeg: " + date + " " + time;
 }
 
@@ -24,5 +25,6 @@ function daysToBirthday()
 
     const result = document.getElementById("result");
     result.innerHTML = "Sünnipäevani: " + days.toFixed(0) + " päeva"
+    result.style.display = "block";
     + "<br> Minu sünnipäeva kuupäev on: 04.06";
 }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Nikita Litvinenko Veebirakenduste Kodu Leht</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -35,8 +36,8 @@
             <li><a href="media.html">Meedia</a></li>
             <li><a href="https://nikitalitvinenko24.thkit.ee/wp" target="_blank">WordPress</a></li>
         </ul>
-        <div style="padding-right: 5px; width: 35px; height: 35px;">
-            <input type="button" value="↑↓" onclick="toggleNavMenu()" id="nav_toggle_button">
+        <div style="padding-right: 5px; width: auto; height: 35px;">
+            <input type="button" value="Menüü" onclick="toggleNavMenu()" id="nav_toggle_button">
         </div>
     </nav>
 
@@ -48,12 +49,12 @@
                 Veebirakendus on arvutitarkvara või programm, mida hoitakse veebiserveris ning mida saab kasutada interneti kaudu veebibrauserite abil.
                 Veebirakendust ei pea alla laadima, vaid saab kasutada võrgus igal ajal, eeldades, et on olemas internetiühendus ja veebibrauser.
             </div>
-            <div style="padding: 0">
-                <div style="display: flex; gap: 5px">
+            <div style="padding: 0; display: flex; flex-direction: column; width: 100%;">
+                <div style="display: flex; gap: 5px; padding: 0px;">
                     <input type="button" value="TÄNA ON" onclick="showDate()">
                     <input type="button" value="Minu sünnipäevani" onclick="daysToBirthday()">
                 </div>
-                <div id="result"></div>
+                <div id="result" style="display: none;"></div>
             </div>
         </section>
         <section class="part2" style="gap: 5px">
@@ -98,9 +99,10 @@
 
     <!--jalus/подвал-->
     <footer>
-        <strong>Kontakteeri minuga:</strong>
-        nikitalitvinenko28()gmail.com
-        <br>
+        <div>
+            <strong>Kontakteeri minuga:</strong>
+            nikitalitvinenko28()gmail.com
+        </div>
         &copy; Nikita Litvinenko
     </footer>
 </body>
